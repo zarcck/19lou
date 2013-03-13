@@ -1,0 +1,853 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="gb2312">
+    <title>19lou ui library</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="./index.html">19lou ui library</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="./index.html">基础模块</a></li>
+                        <li><a href="./base-css.html">基础样式</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="span3 bs-docs-sidebar">
+                <ul class="nav nav-list bs-docs-sidenav affix">
+                    <li class="active"><a href="#AM"><i class="icon-chevron-right"></i> 模块加载器</a></li>
+                    <li><a href="#win"><i class="icon-chevron-right"></i> 弹窗</a></li>
+                    <li><a href="#tips"><i class="icon-chevron-right"></i> 提示</a></li>
+                    <li><a href="#validate"><i class="icon-chevron-right"></i> 验证</a></li>
+                    <li><a href="#slidePlayer"><i class="icon-chevron-right"></i> 轮播</a></li>
+                    <li><a href="#calendar"><i class="icon-chevron-right"></i> 日历</a></li>
+                    <li><a href="#header"><i class="icon-chevron-right"></i> 导航</a></li>
+                    <li><a href="#login"><i class="icon-chevron-right"></i> 登录</a></li>
+                    <li><a href="#ajax"><i class="icon-chevron-right"></i> AJAX</a></li>
+                </ul>
+            </div>
+            <div class="span9">
+            
+                <!--=S AM -->
+                <section id="AM">
+                    <div class="page-header">
+                        <h1>
+                            AM
+                            <small>模块加载器</small>
+                        </h1>
+                    </div>
+                    <h2>Usage</h2>
+<pre class="prettyprint linenums">
+AM(arg, arg, ...);
+</pre>
+                    <div class="alert">
+                        <p>注意：</p>
+                        <p>1. AM 将自动加载 <code>jquery.js</code> 与 <code>App.component.js</code></p>
+                        <p>2. 智能判断文件依赖关系，同个 AM 函数中任一模块加载失败都会导致后续模块停止加载</p>
+                    </div>
+                    <h3>Options</h3>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width:100px;">Name</th>
+                                <th style="width:100px;">type</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>arg</td>
+                                <td>string | function</td>
+                                <td>
+                                    <p><code>arg</code> 可以被定义为以下形式：</p>
+                                    <ul>
+                                        <li>
+                                            <p>文件名称</p>
+                                            <p><code>AM("showWin", "App.showWin", "App.showWin.js");</code></p>
+                                        </li>
+                                        <li>
+                                            <p>相对路径</p>
+                                            <p><code>AM("lib/mustache.js", "$forum/lib/mustache.js");</code></p>
+                                        </li>
+                                        <li>
+                                            <p>绝对路径</p>
+                                            <p><code>AM("http://i3.sbsnew.com/trunk/js/forum/lib/jquery.js");</code></p>
+                                        </li>
+                                        <li>
+                                            <p>匿名函数</p>
+                                            <p><code>AM(function() {...});</code></p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="alert alert-info">
+                        <p>提示：</p>
+                        <p>1. 文件名称缺失前缀或后缀时，将智能补全 <code>App.</code> 前缀与 <code>.js</code> 后缀</p>
+                        <p>2. 标识符 <code>$</code> 指代 JS 根目录，严禁在此标识符后添加 <code>/</code></p>
+                        <p>3. 模块将被加载，函数将被执行</p>
+                    </div>
+                </section>
+                <!--=E AM -->
+                
+                <!--=S App.win -->
+                <section id="win">
+                    <div class="page-header">
+                        <h1>
+                            App.win
+                            <small>弹窗</small>
+                        </h1>
+                    </div>
+                    <h2>Usage</h2>
+                    <div class="bs-docs-example">
+                        <a href="./examples/win.html" target="_blank" class="btn btn-primary">Demo</a>
+                    </div>
+<pre class="prettyprint linenums">
+AM("showWin", function() {
+    App.win({
+        title: "标题",
+        content: "内容",
+        ...
+    });
+});
+</pre>
+                    <h3>Options</h3>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width:100px;">Name</th>
+                                <th style="width:100px;">type</th>
+                                <th style="width:100px;">default</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>id</td>
+                                <td>string</td>
+                                <td>'defaultId'</td>
+                                <td>ID</td>
+                            </tr>
+                            <tr>
+                                <td>title</td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>标题</td>
+                            </tr>
+                            <tr>
+                                <td>content</td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>内容（支持 HTML 标签）</td>
+                            </tr>
+                            <tr>
+                                <td>loading</td>
+                                <td>number | object</td>
+                                <td>0</td>
+                                <td>
+                                    <p>异步加载</p>
+                                    <p><code>loading: 0</code> 关闭</p>
+                                    <p><code>loading: {url: 请求地址, callback(data): 对返回数据处理的回调函数}</code> 开启</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>mask</td>
+                                <td>number</td>
+                                <td>0</td>
+                                <td>
+                                    <p>蒙版</p>
+                                    <p><code>mask: 0</code> 关闭</p>
+                                    <p><code>mask: 1</code> 开启</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>button</td>
+                                <td>array</td>
+                                <td><code>[{}, {}, …]</code></td>
+                                <td>
+                                    <p>按钮</p>
+                                    <p><code>[{idname: ID, title: 文案, classname: class, callback: 回调}, {}, …]</code></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>callback</td>
+                                <td>function</td>
+                                <td><code>return true</code></td>
+                                <td>关闭按钮回调函数</td>
+                            </tr>
+                            <tr>
+                                <td>tips</td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>提示</td>
+                            </tr>
+                            <tr>
+                                <td>width</td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>宽度</td>
+                            </tr>
+                            <tr>
+                                <td>height</td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>高度</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!--=E App.win -->
+                
+                <!--=S App.tips -->
+                <section id="tips">
+                    <div class="page-header">
+                        <h1>
+                            App.tips
+                            <small>提示</small>
+                        </h1>
+                    </div>
+                    <h2>Usage</h2>
+                    <div class="bs-docs-example">
+                        <a href="./examples/tips.html" target="_blank" class="btn btn-primary">Demo</a>
+                    </div>
+<pre class="prettyprint linenums">
+AM("showTips", function() {
+    App.tips({
+        type: "类型",
+        message: "内容",
+        ...
+    });
+});
+</pre>
+                    <h3>Options</h3>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width:100px;">Name</th>
+                                <th style="width:100px;">type</th>
+                                <th style="width:100px;">default</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>type</td>
+                                <td>string</td>
+                                <td>'right'</td>
+                                <td>
+                                    <p>类型</p>
+                                    <p><code>type: 'right'</code> 正确</p>
+                                    <p><code>type: 'warn'&nbsp;</code> 警告</p>
+                                    <p><code>type: 'error'</code> 错误</p>
+                                    <p>警告与错误为同一款样式，建议优先使用 <code>type: 'error'</code></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>message</td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>内容（支持 HTML 标签）</td>
+                            </tr>
+                            <tr>
+                                <td>autoclose</td>
+                                <td>number</td>
+                                <td>3</td>
+                                <td>关闭时间（单位：秒）</td>
+                            </tr>
+                            <tr>
+                                <td>redirectUrl</td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>页面跳转</td>
+                            </tr>
+                            <tr>
+                                <td>closeBtn</td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>
+                                    <p>关闭按钮</p>
+                                    <p><code>closeBtn: true&nbsp;</code> 开启</p>
+                                    <p><code>closeBtn: false</code> 关闭</p>
+                                    <p>点击关闭按钮只会隐去提示，不做页面跳转。</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!--=E App.tips -->
+                
+                <!--=S App.validate -->
+                <section id="validate">
+                    <div class="page-header">
+                        <h1>
+                            App.validate
+                            <small>验证</small>
+                        </h1>
+                    </div>
+                    <h2>Usage</h2>
+<pre class="prettyprint linenums">
+AM("validate", function() {
+    $("selector").validate(options); //return boolean
+});
+</pre>
+                    <h3>Options</h3>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width:100px;">Name</th>
+                                <th style="width:100px;">type</th>
+                                <th style="width:150px;">format</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>options</td>
+                                <td>object</td>
+                                <td><code>{rule: arg, ...}</code></td>
+                                <td>组合验证，每组验证之间为且的关系</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Methods</h3>
+                    <div class="alert alert-info">
+                        <p>提示：</p>
+                        <p>表中 arg 标记为 <span class="label">true</span> 时，可直接以 <code>{rule: true}</code> 格式使用</p>
+                        <p>验证方法可根据需求以 <code>{rule: arg, rule: arg, ...}</code> 格式任意组合</p>
+                    </div>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width:150px;">rule</th>
+                                <th style="width:150px;">arg</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>required</td>
+                                <td><span class="label">true</span></td>
+                                <td>必填</td>
+                            </tr>
+                            <tr>
+                                <td>number</td>
+                                <td><span class="label">true</span></td>
+                                <td>数字</td>
+                            </tr>
+                            <tr>
+                                <td>email</td>
+                                <td><span class="label">true</span></td>
+                                <td>邮箱</td>
+                            </tr>
+                            <tr>
+                                <td>ip</td>
+                                <td><span class="label">true</span></td>
+                                <td>IP</td>
+                            </tr>
+                            <tr>
+                                <td>mobile</td>
+                                <td><span class="label">true</span></td>
+                                <td>手机</td>
+                            </tr>
+                            <tr>
+                                <td>date</td>
+                                <td>'time' | ''</td>
+                                <td>
+                                    <p>日期格式</p>
+                                    <p><code>{date: time}</code> yyyy-mm-dd hh:mm</p>
+                                    <p><code>{date: ''}&nbsp;&nbsp;</code> yyyy-mm-dd</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>interval</td>
+                                <td>
+                                    <p>yyyy-mm-dd</p>
+                                    <p>yyyy-mm-dd hh:mm</p>
+                                </td>
+                                <td>时间间隔</td>
+                            </tr>
+                            <tr>
+                                <td>compare</td>
+                                <td>selector</td>
+                                <td>全等</td>
+                            </tr>
+                            <tr>
+                                <td>min</td>
+                                <td>number</td>
+                                <td>最小值</td>
+                            </tr>
+                            <tr>
+                                <td>max</td>
+                                <td>number</td>
+                                <td>最大值</td>
+                            </tr>
+                            <tr>
+                                <td>minlength</td>
+                                <td>number</td>
+                                <td>最小长度</td>
+                            </tr>
+                            <tr>
+                                <td>maxlength</td>
+                                <td>number</td>
+                                <td>最大长度</td>
+                            </tr>
+                            <tr>
+                                <td>integer</td>
+                                <td><span class="label">true</span></td>
+                                <td>整数</td>
+                            </tr>
+                            <tr>
+                                <td>username</td>
+                                <td><span class="label">true</span></td>
+                                <td>用户名（汉字、字母、数字、下划线）</td>
+                            </tr>
+                            <tr>
+                                <td>username_length</td>
+                                <td><span class="label">true</span></td>
+                                <td>用户名（6 - 16 个字符，1 个汉字为 2 个字符）</td>
+                            </tr>
+                            <tr>
+                                <td>location</td>
+                                <td><span class="label">true</span></td>
+                                <td>用户名（汉字、字母、数字）</td>
+                            </tr>
+                            <tr>
+                                <td>realname</td>
+                                <td><span class="label">true</span></td>
+                                <td>真实姓名（汉字）</td>
+                            </tr>
+                            <tr>
+                                <td>password</td>
+                                <td><span class="label">true</span></td>
+                                <td>密码（字符编码的范围）</td>
+                            </tr>
+                            <tr>
+                                <td>pwd_strength</td>
+                                <td><span class="label">true</span></td>
+                                <td>
+                                    <p>密码强度（返回数字 1 - 4 分别对应四个强度等级）</p>
+                                    <p><span class="label label-important">1：弱，账号容易被盗！</span></p>
+                                    <p><span class="label label-warning">2：中，账号比较安全！</span></p>
+                                    <p><span class="label label-info">3：强，账号非常安全！</span></p>
+                                    <p><span class="label label-success">4：非常强，账号绝对安全！</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>tag</td>
+                                <td><span class="label">true</span></td>
+                                <td>标签（汉字、字母、数字、任何空白字符，包括空格、制表符、换页符等）</td>
+                            </tr>
+                            <tr>
+                                <td>douhao</td>
+                                <td><span class="label">true</span></td>
+                                <td>逗号</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!--=E App.validate -->
+                
+                <!--=S App.slidePlayer -->
+                <section id="slidePlayer">
+                    <div class="page-header">
+                        <h1>
+                            App.slidePlayer
+                            <small>轮播</small>
+                        </h1>
+                    </div>
+                    <h2>Usage</h2>
+                    <div class="bs-docs-example">
+                        <a href="./examples/slidePlayer.html" target="_blank" class="btn btn-primary">Demo</a>
+                    </div>
+                    <h4>HTML</h4>
+<pre class="prettyprint linenums">
+&lt;ul id="slide"&gt;
+    &lt;li&gt;
+        &lt;a href="链接地址" target="_blank"&gt;
+            &lt;img title="" alt="" src="图片地址"/&gt;
+            &lt;span&gt;标题&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</pre>
+                    <h4>Javascript</h4>
+<pre class="prettyprint linenums">
+AM("slidePlayer", function() {
+    App.tips(selector, {
+        width: "宽度",
+        height: "高度",
+        ...
+    });
+});
+</pre>
+                    <h3>Options</h3>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width:100px;">Name</th>
+                                <th style="width:100px;">type</th>
+                                <th style="width:100px;">default</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>selector</td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>轮播对象（jQuery 选择器）</td>
+                            </tr>
+                            <tr>
+                                <td>width</td>
+                                <td>string</td>
+                                <td>图片宽度</td>
+                                <td>轮播宽度</td>
+                            </tr>
+                            <tr>
+                                <td>height</td>
+                                <td>string</td>
+                                <td>图片高度</td>
+                                <td>轮播高度</td>
+                            </tr>
+                            <tr>
+                                <td>time</td>
+                                <td>string</td>
+                                <td>'3000'</td>
+                                <td>切换间隔（单位：毫秒）</td>
+                            </tr>
+                            <tr>
+                                <td>page</td>
+                                <td>number</td>
+                                <td>1</td>
+                                <td>初始页数</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!--=E App.slidePlayer -->
+                
+                <!--=S App.calendar -->
+                <section id="calendar">
+                    <div class="page-header">
+                        <h1>
+                            App.calendar
+                            <small>日历</small>
+                        </h1>
+                    </div>
+                    <h2>Usage</h2>
+                    <div class="bs-docs-example">
+                        <a href="./examples/calendar.html" target="_blank" class="btn btn-primary">Demo</a>
+                    </div>
+<pre class="prettyprint linenums">
+AM("calendar", function() {
+    showcalendar(event, addtime, parentid, startdate, enddate, callback);
+});
+</pre>
+                    <div class="alert alert-info">
+                        可以通过为 <code>input</code> 元素添加 <code>vaule</code> 值来指定日历初始化时间，格式：<code>yy-mm-dd</code>
+                    </div>
+                    <h3>Options</h3>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width:100px;">Name</th>
+                                <th style="width:100px;">type</th>
+                                <th style="width:100px;">default</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>event</td>
+                                <td>object</td>
+                                <td></td>
+                                <td>事件对象 <span class="label label-important">必填项</span></td>
+                            </tr>
+                            <tr>
+                                <td>addtime</td>
+                                <td>number</td>
+                                <td>0</td>
+                                <td>
+                                    <p>显示时间</p>
+                                    <p>开启：<code>1</code></p>
+                                    <p>关闭：<code>0</code></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>parentid</td>
+                                <td>string</td>
+                                <td>null</td>
+                                <td>弹窗中使用时需指定其窗口ID</td>
+                            </tr>
+                            <tr>
+                                <td>startdate</td>
+                                <td>string</td>
+                                <td></td>
+                                <td>
+                                    <p>时间上限</p>
+                                    <p>今天：<code>today</code></p>
+                                    <p>格式：<code>yy-mm-dd</code></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>enddate</td>
+                                <td>string</td>
+                                <td></td>
+                                <td>
+                                    <p>时间下限</p>
+                                    <p>今天：<code>today</code></p>
+                                    <p>格式：<code>yy-mm-dd</code></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>callback</td>
+                                <td>function</td>
+                                <td></td>
+                                <td>
+                                    <p>回调函数，第一个参数返回选中时间</p>
+                                    <p>事件对象：<code>this.event</code></p>
+                                    <p>目标对象：<code>this.controlid</code></p>
+                                    <p>日历对象：<code>this.calendar</code></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!--=E App.calendar -->
+                
+                <!--=S App.header -->
+                <section id="header">
+                    <div class="page-header">
+                        <h1>
+                            App.header
+                            <small>导航</small>
+                        </h1>
+                    </div>
+                    <h2>Usage</h2>
+<pre class="prettyprint linenums">
+AM("header", function() {
+    App.header();
+});
+</pre>
+                </section>
+                <!--=E App.header -->
+                
+                <!--=S App.login -->
+                <section id="login">
+                    <div class="page-header">
+                        <h1>
+                            App.login
+                            <small>登录</small>
+                        </h1>
+                    </div>
+                    <h2>Usage</h2>
+<pre class="prettyprint linenums">
+AM("login", function() {
+    App.login({
+        isLogin: "登录状态",
+        host: "当前域名",
+        ...
+    });
+});
+</pre>
+                    <div class="alert alert-info">
+                        <p>初始化登录组件后，为链接添加 <code>class="J_login"</code> 来实现冒泡事件绑定。</p>
+                        <p>用户处于登录状态，点击链接时按以下优先级进行处理：</p>
+                        <p>1. 跳转 <code>href</code> 地址</p>
+                        <p>2. 执行 <code>data-callback</code> 函数，并将当前点击对象当作第一个参数传入</p>
+                        <p>3. 刷新当前页面</p>
+                    </div>
+<pre class="prettyprint linenums">
+&lt;a class="J_login" href="跳转" data-title="标题" data-ttname="注册来源" data-callback="回调"&gt;登录&lt;/a&gt;
+</pre>
+                    <h3>Options</h3>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width:100px;">Name</th>
+                                <th style="width:100px;">type</th>
+                                <th style="width:100px;">default</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>isLogin</td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>登录状态</td>
+                            </tr>
+                            <tr>
+                                <td>host</td>
+                                <td>string</td>
+                                <td>'http://www.19lou.com'</td>
+                                <td>当前域名</td>
+                            </tr>
+                            <tr>
+                                <td>qqLogin</td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>
+                                    <p>QQ 登录</p>
+                                    <p><code>qqLogin: true&nbsp;</code> 开启</p>
+                                    <p><code>qqLogin: false</code> 关闭</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>sinaLogin</td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>
+                                    <p>新浪登录</p>
+                                    <p><code>sinaLogin: true&nbsp;</code> 开启</p>
+                                    <p><code>sinaLogin: false</code> 关闭</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>taobaoLogin</td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>
+                                    <p>淘宝登录</p>
+                                    <p><code>taobaoLogin: true&nbsp;</code> 开启</p>
+                                    <p><code>taobaoLogin: false</code> 关闭</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>qihooLogin</td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>
+                                    <p>360 登录</p>
+                                    <p><code>qihooLogin: true&nbsp;</code> 开启</p>
+                                    <p><code>qihooLogin: false</code> 关闭</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>guide</td>
+                                <td>number</td>
+                                <td>-1</td>
+                                <td>
+                                    <p>登录引导（单位：秒）</p>
+                                    <p><code>guide: -1</code> 不显示</p>
+                                    <p><code>guide: 3&nbsp;</code> 3秒后显示</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!--=E App.login -->
+                
+                <!--=S AJAX -->
+                <section id="ajax">
+                    <div class="page-header">
+                        <h1>
+                            AJAX
+                            <small>异步请求</small>
+                        </h1>
+                    </div>
+                    <h2>Usage</h2>
+<pre class="prettyprint linenums">
+$.ajax({
+    type: "请求方式",
+    url:  "请求地址",
+    data: "发送到服务器的数据",
+    success: function(res) {
+        // 请求成功后的回调函数，res为服务器返回数据
+    }
+    ...
+});
+</pre>
+<div class="alert alert-info">以上是 <code>$.ajax</code> 的传统写法，1.5.0 版本后 <code>$.ajax</code> 返回的是 deferred 对象，可以做如下链式操作：</div>
+<pre class="prettyprint linenums">
+$.when(
+    $.ajax({
+        type: "请求方式",
+        url:  "请求地址",
+        data: "发送到服务器的数据"
+        ...
+    })
+).done(function(res) {
+    // 请求成功后的回调函数，res为服务器返回数据
+});
+</pre>
+                    <h3>Options</h3>
+                    <div class="alert alert-info">以下只列举 <code>$.ajax</code> 的常用配置项，完整文档请 <a href="http://jqapi.com/#p=jQuery.ajax" target="_blank">点击这里</a> 查看。</div>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width:100px;">Name</th>
+                                <th style="width:100px;">type</th>
+                                <th style="width:100px;">default</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>type</td>
+                                <td>string</td>
+                                <td>'GET'</td>
+                                <td>
+                                    <p>请求方式，'POST' 或 'GET'</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>url</td>
+                                <td>string</td>
+                                <td>当前地址</td>
+                                <td>
+                                    <p>请求地址</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>object | string</td>
+                                <td></td>
+                                <td>
+                                    <p>发送到服务器的数据</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>success</td>
+                                <td>function | array</td>
+                                <td></td>
+                                <td>
+                                    <p>请求成功后的回调函数</p>
+                                    <p>可以接受一个函数数组，每个函数将被依次调用。</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!--=E AJAX -->
+                
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/prettify.js"></script>
+    <script type="text/javascript">
+        window.prettyPrint && prettyPrint();
+    </script>
+</body>
+</html>

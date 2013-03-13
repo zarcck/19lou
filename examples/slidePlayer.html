@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="gb2312">
+    <title>slidePlayer - 19lou ui library</title>
+    <link href="http://i3.sbsnew.com/trunk/css/forum/default/common.css" rel="stylesheet">
+    <script type="text/javascript">
+        var AM_Config = {
+            baseUrl: "http://i3.sbsnew.com/trunk/js/forum"
+        };
+    </script>
+    <script type="text/javascript" src="http://i3.sbsnew.com/trunk/js/forum/AM.js"></script>
+<body>
+    <div class="layout mt10" style="width:320px;">
+        <!--=S slide -->
+        <ul id="slide">
+            <li>
+                <a href="#" target="_blank">
+                    <img title="" alt="" src="http://i3.dukuai.com/ui/style/09/pic/B320x170.gif" />
+                    <span>标题1</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img title="" alt="" src="http://i3.dukuai.com/ui/style/09/pic/B320x170.gif" />
+                    <span>标题2</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img title="" alt="" src="http://i3.dukuai.com/ui/style/09/pic/B320x170.gif" />
+                    <span>标题3</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img title="" alt="" src="http://i3.dukuai.com/ui/style/09/pic/B320x170.gif" />
+                    <span>标题4</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img title="" alt="" src="http://i3.dukuai.com/ui/style/09/pic/B320x170.gif" />
+                    <span>标题5</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img title="" alt="" src="http://i3.dukuai.com/ui/style/09/pic/B320x170.gif" />
+                    <span>标题6</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img title="" alt="" src="http://i3.dukuai.com/ui/style/09/pic/B320x170.gif" />
+                    <span>标题7</span>
+                </a>
+            </li>
+        </ul>
+        <!--=E slide -->
+
+        <br />
+    
+        <!--=S slide -->
+        <ul id="slide2">
+            <li>
+                <a href="#" target="_blank">
+                    <img title="" alt="" src="http://i3.dukuai.com/ui/style/09/pic/B320x170.gif" />
+                    <span>标题1</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img title="" alt="" src="http://i3.dukuai.com/ui/style/09/pic/B320x170.gif" />
+                    <span>标题2</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img title="" alt="" src="http://i3.dukuai.com/ui/style/09/pic/B320x170.gif" />
+                    <span>标题3</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img title="" alt="" src="http://i3.dukuai.com/ui/style/09/pic/B320x170.gif" />
+                    <span>标题4</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img title="" alt="" src="http://i3.dukuai.com/ui/style/09/pic/B320x170.gif" />
+                    <span>标题5</span>
+                </a>
+            </li>
+        </ul>
+        <!--=E slide -->
+    </div>
+    <script type="text/javascript">
+        AM("slidePlayer", function() {
+        
+            App.slidePlayer("#slide", {
+                width: "320",
+                height: "170",
+                page: 4
+            });
+            
+            App.slidePlayer("#slide2", {
+                width: "320",
+                height: "170",
+                time: 1000
+            });
+            
+        });
+    </script>
+</body>
+</html>
