@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="gb2312">
+    <title>calendar - 19lou ui library</title>
+    <link href="http://i3.sbsnew.com/trunk/css/forum/default/common.css" rel="stylesheet">
+    <script type="text/javascript">
+        var AM_Config = {
+            baseUrl: "http://i3.sbsnew.com/trunk/js/forum"
+        };
+    </script>
+    <script type="text/javascript" src="http://i3.sbsnew.com/trunk/js/forum/AM.js"></script>
+<body>
+    <div class="layout mt10">
+        <!--=S calendar -->
+        <ul>
+        	<li class="mb10">
+                默认用法：<input type="text" class="J_calendar txt"/>
+            </li>
+        	<li class="mb10">
+                指定日期：<input type="text" class="J_calendar txt" value="1987-07-17"/>
+            </li>
+        	<li class="mb10">
+                显示时间：<input type="text" class="J_calendar txt" data-type="show-time"/>
+            </li>
+        	<li class="mb10">
+                时间上限：<input type="text" class="J_calendar txt" data-type="prev-limit"/> （屏蔽 1987-07-17 以前）
+            </li>
+        	<li class="mb10">
+                时间下限：<input type="text" class="J_calendar txt" data-type="next-limit"/> （屏蔽 1987-07-17 以后）
+            </li>
+        	<li class="mb10">
+                回调函数：<input type="text" class="J_calendar txt" data-type="callback"/>
+            </li>
+        </ul>
+        <a href="javascript:;" id="J_win" class="submit-btn"><span>弹窗日历</span></a>
+        <!--=E calendar -->
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/>
+    <script type="text/javascript">
+        AM("calendar", function() {
+        
+            <!--=S calendar -->
+            $("body").delegate(".J_calendar", "click", function(e) {
+                var $this = $(this),
+                    type  = $this.attr("data-type"),
+                    args  = [e, 0, null, 0, 0, function() {}];
+                    
+                var callback = function(date) {
+                    alert(date);
+                };
+                
+                switch (type) {
+                
+                    case "show-time":
+                        args[1] = 1;
+                        break;
+                        
+                    case "window":
+                        args[2] = "J_winCalendar";
+                        break;
+                        
+                    case "prev-limit":
+                        args[3] = "1987-07-17";
+                        break;
+                        
+                    case "next-limit":
+                        args[4] = "1987-07-17";
+                        break;
+                        
+                    case "callback":
+                        args[5] = callback;
+                        break;
+                        
+                }
+                
+                showcalendar.apply(null, args);
+            });
+            <!--=E calendar -->
+            
+        });
+        
+        AM("showWin", function() {
+        
+            <!--=S 弹窗日历 -->
+            $("#J_win").click(function() {
+                var buffer = [
+                    '<table class="win-table">',
+                        '<tbody>',
+                            '<tr>',
+                                '<th><label for="subject">选择时间：</label></th>',
+                                '<td><input type="text" id="subject" class="J_calendar txt" tabindex="1" data-type="window"/></td>',
+                            '</tr>',
+                        '</tbody>',
+                    '</table>'
+                ].join("");
+                
+                App.win({
+                    id: "J_winCalendar",
+                    title: "弹窗日历",
+                    content: buffer,
+                    width: 350,
+                    height: 350
+                });
+            });
+            <!--=E 弹窗日历 -->
+            
+        });
+    </script>
+</body>
+</html>

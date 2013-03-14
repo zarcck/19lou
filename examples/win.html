@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="gb2312">
+    <title>win - 19lou ui library</title>
+    <link href="http://i3.sbsnew.com/trunk/css/forum/default/common.css" rel="stylesheet">
+    <script type="text/javascript">
+        var AM_Config = {
+            baseUrl: "http://i3.sbsnew.com/trunk/js/forum"
+        };
+    </script>
+    <script type="text/javascript" src="http://i3.sbsnew.com/trunk/js/forum/AM.js"></script>
+<body>
+    <div class="layout mt10 tc">
+        <!--=S win -->
+        <a href="javascript:;" id="form" class="submit-btn"><span>列表弹窗</span></a>
+        <a href="javascript:;" id="table" class="submit-btn"><span>表格弹窗</span></a>
+        <a href="javascript:;" id="data" class="submit-btn"><span>数据弹窗</span></a>
+        <a href="javascript:;" id="alert" class="submit-btn"><span>提示弹窗</span></a>
+        <!--=E win -->
+    </div>
+    <script type="text/javascript">
+        AM("showWin", function() {
+            
+            <!--=S 列表弹窗 -->
+            $("#form").click(function() {
+                var buffer = [
+                    '<ul class="win-form">',
+                        '<li><label class="lab">附件：</label>logo.png</li>',
+                        '<li><label class="lab">售价：</label>1</li>',
+                        '<li><label class="lab">余额：</label>10</li>',
+                    '</ul>'
+                ].join("");
+                
+                App.win({
+                    title: "列表弹窗",
+                    content: buffer
+                });
+            });
+            <!--=E 列表弹窗 -->
+            
+            <!--=S 表格弹窗 -->
+            $("#table").click(function() {
+                var buffer = [
+                    '<table class="win-table">',
+                        '<tbody>',
+                            '<tr>',
+                                '<th><label for="subject">标题：</label></th>',
+                                '<td><input type="text" id="subject" class="txt" tabindex="1"/></td>',
+                            '</tr>',
+                            '<tr>',
+                                '<th><label for="content">内容：</label></th>',
+                                '<td><textarea id="content" class="txt" tabindex="2"></textarea></td>',
+                            '</tr>',
+                        '</tbody>',
+                    '</table>'
+                ].join("");
+                
+                App.win({
+                    title: "表格弹窗",
+                    content: buffer,
+                    width: 400
+                });
+            });
+            <!--=E 表格弹窗 -->
+            
+            <!--=S 数据弹窗 -->
+            $("#data").click(function() {
+                var buffer = [
+                    '<ul class="win-data">',
+                        '<li>白羊座</li>',
+                        '<li>金牛座</li>',
+                        '<li>双子座</li>',
+                        '<li>巨蟹座</li>',
+                        '<li>狮子座</li>',
+                        '<li>处女座</li>',
+                        '<li>天秤座</li>',
+                        '<li>天蝎座</li>',
+                        '<li>人马座</li>',
+                        '<li>摩羯座</li>',
+                        '<li>宝瓶座</li>',
+                        '<li>双鱼座</li>',
+                    '</ul>'
+                ].join("");
+                
+                App.win({
+                    title: "数据弹窗",
+                    content: buffer,
+                    width: 480
+                });
+            });
+            <!--=E 数据弹窗 -->
+            
+            <!--=S 提示弹窗 -->
+            $("#alert").click(function() {
+                var buffer = [
+                    '<dl class="win-alert">',
+                        '<dt class="msg">恭喜你，帖子收藏成功！<br /><a href="#" class="tip">立即查看“我的收藏”</a></dt>',
+                        '<dd class="smiley"><img src="http://i3.dukuai.com/misc/forum/smilies/h200248.gif"></dd>',
+                    '</dl>'
+                ].join("");
+                
+                App.win({
+                    title: "提示弹窗",
+                    content: buffer,
+                    width: 275
+                });
+            });
+            <!--=E 提示弹窗 -->
+            
+        });
+    </script>
+</body>
+</html>

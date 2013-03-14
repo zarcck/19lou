@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="gb2312">
+    <title>tips - 19lou ui library</title>
+    <link href="http://i3.sbsnew.com/trunk/css/forum/default/common.css" rel="stylesheet">
+    <script type="text/javascript">
+        var AM_Config = {
+            baseUrl: "http://i3.sbsnew.com/trunk/js/forum"
+        };
+    </script>
+    <script type="text/javascript" src="http://i3.sbsnew.com/trunk/js/forum/AM.js"></script>
+<body>
+    <div class="layout mt10 tc">
+        <!--=S tips -->
+        <a href="javascript:;" id="right" class="submit-btn"><span>正确提示</span></a>
+        <a href="javascript:;" id="error" class="reply-btn"><span>错误提示</span></a>
+        <a href="javascript:;" id="close" class="option-btn"><span>关闭按钮</span></a>
+        <!--=E tips -->
+    </div>
+    <script type="text/javascript">
+        AM("showTips", function() {
+            
+            $("#right").click(function() {
+                App.tips({message: "基本资料更新成功！"});
+            });
+            
+            $("#error").click(function() {
+                App.tips({type: "error", message: "用户名不能为空！"});
+            });
+            
+            $("#close").click(function() {
+                App.tips({message: "带关闭按钮的提示哟！", closeBtn: true});
+            });
+
+        });
+    </script>
+</body>
+</html>
