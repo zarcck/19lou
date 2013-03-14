@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
+ï»¿<!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="gb2312">
     <title>19lou ui library</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/docs.css" rel="stylesheet">
@@ -19,8 +19,8 @@
                 <a class="brand" href="./index.html">19lou ui library</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li class="active"><a href="./index.html">»ù´¡Ä£¿é</a></li>
-                        <li><a href="./base-css.html">»ù´¡ÑùÊ½</a></li>
+                        <li class="active"><a href="./index.html">åŸºç¡€æ¨¡å—</a></li>
+                        <li><a href="./base-css.html">åŸºç¡€æ ·å¼</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,14 +31,14 @@
         <div class="row">
             <div class="span3 bs-docs-sidebar">
                 <ul class="nav nav-list bs-docs-sidenav affix">
-                    <li class="active"><a href="#AM"><i class="icon-chevron-right"></i> Ä£¿é¼ÓÔØÆ÷</a></li>
-                    <li><a href="#win"><i class="icon-chevron-right"></i> µ¯´°</a></li>
-                    <li><a href="#tips"><i class="icon-chevron-right"></i> ÌáÊ¾</a></li>
-                    <li><a href="#validate"><i class="icon-chevron-right"></i> ÑéÖ¤</a></li>
-                    <li><a href="#slidePlayer"><i class="icon-chevron-right"></i> ÂÖ²¥</a></li>
-                    <li><a href="#calendar"><i class="icon-chevron-right"></i> ÈÕÀú</a></li>
-                    <li><a href="#header"><i class="icon-chevron-right"></i> µ¼º½</a></li>
-                    <li><a href="#login"><i class="icon-chevron-right"></i> µÇÂ¼</a></li>
+                    <li class="active"><a href="#AM"><i class="icon-chevron-right"></i> æ¨¡å—åŠ è½½å™¨</a></li>
+                    <li><a href="#win"><i class="icon-chevron-right"></i> å¼¹çª—</a></li>
+                    <li><a href="#tips"><i class="icon-chevron-right"></i> æç¤º</a></li>
+                    <li><a href="#validate"><i class="icon-chevron-right"></i> éªŒè¯</a></li>
+                    <li><a href="#slidePlayer"><i class="icon-chevron-right"></i> è½®æ’­</a></li>
+                    <li><a href="#calendar"><i class="icon-chevron-right"></i> æ—¥å†</a></li>
+                    <li><a href="#header"><i class="icon-chevron-right"></i> å¯¼èˆª</a></li>
+                    <li><a href="#login"><i class="icon-chevron-right"></i> ç™»å½•</a></li>
                     <li><a href="#ajax"><i class="icon-chevron-right"></i> AJAX</a></li>
                 </ul>
             </div>
@@ -49,7 +49,7 @@
                     <div class="page-header">
                         <h1>
                             AM
-                            <small>Ä£¿é¼ÓÔØÆ÷</small>
+                            <small>æ¨¡å—åŠ è½½å™¨</small>
                         </h1>
                     </div>
                     <h2>Usage</h2>
@@ -57,9 +57,9 @@
 AM(arg, arg, ...);
 </pre>
                     <div class="alert">
-                        <p>×¢Òâ£º</p>
-                        <p>1. AM ½«×Ô¶¯¼ÓÔØ <code>jquery.js</code> Óë <code>App.component.js</code></p>
-                        <p>2. ÖÇÄÜÅĞ¶ÏÎÄ¼şÒÀÀµ¹ØÏµ£¬Í¬¸ö AM º¯ÊıÖĞÈÎÒ»Ä£¿é¼ÓÔØÊ§°Ü¶¼»áµ¼ÖÂºóĞøÄ£¿éÍ£Ö¹¼ÓÔØ</p>
+                        <p>æ³¨æ„ï¼š</p>
+                        <p>1. AM å°†è‡ªåŠ¨åŠ è½½ <code>jquery.js</code> ä¸ <code>App.component.js</code></p>
+                        <p>2. æ™ºèƒ½åˆ¤æ–­æ–‡ä»¶ä¾èµ–å…³ç³»ï¼ŒåŒä¸ª AM å‡½æ•°ä¸­ä»»ä¸€æ¨¡å—åŠ è½½å¤±è´¥éƒ½ä¼šå¯¼è‡´åç»­æ¨¡å—åœæ­¢åŠ è½½</p>
                     </div>
                     <h3>Options</h3>
                     <table class="table table-bordered table-striped">
@@ -75,22 +75,22 @@ AM(arg, arg, ...);
                                 <td>arg</td>
                                 <td>string | function</td>
                                 <td>
-                                    <p><code>arg</code> ¿ÉÒÔ±»¶¨ÒåÎªÒÔÏÂĞÎÊ½£º</p>
+                                    <p><code>arg</code> å¯ä»¥è¢«å®šä¹‰ä¸ºä»¥ä¸‹å½¢å¼ï¼š</p>
                                     <ul>
                                         <li>
-                                            <p>ÎÄ¼şÃû³Æ</p>
+                                            <p>æ–‡ä»¶åç§°</p>
                                             <p><code>AM("showWin", "App.showWin", "App.showWin.js");</code></p>
                                         </li>
                                         <li>
-                                            <p>Ïà¶ÔÂ·¾¶</p>
+                                            <p>ç›¸å¯¹è·¯å¾„</p>
                                             <p><code>AM("lib/mustache.js", "$forum/lib/mustache.js");</code></p>
                                         </li>
                                         <li>
-                                            <p>¾ø¶ÔÂ·¾¶</p>
+                                            <p>ç»å¯¹è·¯å¾„</p>
                                             <p><code>AM("http://i3.sbsnew.com/trunk/js/forum/lib/jquery.js");</code></p>
                                         </li>
                                         <li>
-                                            <p>ÄäÃûº¯Êı</p>
+                                            <p>åŒ¿åå‡½æ•°</p>
                                             <p><code>AM(function() {...});</code></p>
                                         </li>
                                     </ul>
@@ -99,10 +99,10 @@ AM(arg, arg, ...);
                         </tbody>
                     </table>
                     <div class="alert alert-info">
-                        <p>ÌáÊ¾£º</p>
-                        <p>1. ÎÄ¼şÃû³ÆÈ±Ê§Ç°×º»òºó×ºÊ±£¬½«ÖÇÄÜ²¹È« <code>App.</code> Ç°×ºÓë <code>.js</code> ºó×º</p>
-                        <p>2. ±êÊ¶·û <code>$</code> Ö¸´ú JS ¸ùÄ¿Â¼£¬ÑÏ½ûÔÚ´Ë±êÊ¶·ûºóÌí¼Ó <code>/</code></p>
-                        <p>3. Ä£¿é½«±»¼ÓÔØ£¬º¯Êı½«±»Ö´ĞĞ</p>
+                        <p>æç¤ºï¼š</p>
+                        <p>1. æ–‡ä»¶åç§°ç¼ºå¤±å‰ç¼€æˆ–åç¼€æ—¶ï¼Œå°†æ™ºèƒ½è¡¥å…¨ <code>App.</code> å‰ç¼€ä¸ <code>.js</code> åç¼€</p>
+                        <p>2. æ ‡è¯†ç¬¦ <code>$</code> æŒ‡ä»£ JS æ ¹ç›®å½•ï¼Œä¸¥ç¦åœ¨æ­¤æ ‡è¯†ç¬¦åæ·»åŠ  <code>/</code></p>
+                        <p>3. æ¨¡å—å°†è¢«åŠ è½½ï¼Œå‡½æ•°å°†è¢«æ‰§è¡Œ</p>
                     </div>
                 </section>
                 <!--=E AM -->
@@ -112,7 +112,7 @@ AM(arg, arg, ...);
                     <div class="page-header">
                         <h1>
                             App.win
-                            <small>µ¯´°</small>
+                            <small>å¼¹çª—</small>
                         </h1>
                     </div>
                     <h2>Usage</h2>
@@ -122,8 +122,8 @@ AM(arg, arg, ...);
 <pre class="prettyprint linenums">
 AM("showWin", function() {
     App.win({
-        title: "±êÌâ",
-        content: "ÄÚÈİ",
+        title: "æ ‡é¢˜",
+        content: "å†…å®¹",
         ...
     });
 });
@@ -149,22 +149,22 @@ AM("showWin", function() {
                                 <td>title</td>
                                 <td>string</td>
                                 <td>''</td>
-                                <td>±êÌâ</td>
+                                <td>æ ‡é¢˜</td>
                             </tr>
                             <tr>
                                 <td>content</td>
                                 <td>string</td>
                                 <td>''</td>
-                                <td>ÄÚÈİ£¨Ö§³Ö HTML ±êÇ©£©</td>
+                                <td>å†…å®¹ï¼ˆæ”¯æŒ HTML æ ‡ç­¾ï¼‰</td>
                             </tr>
                             <tr>
                                 <td>loading</td>
                                 <td>number | object</td>
                                 <td>0</td>
                                 <td>
-                                    <p>Òì²½¼ÓÔØ</p>
-                                    <p><code>loading: 0</code> ¹Ø±Õ</p>
-                                    <p><code>loading: {url: ÇëÇóµØÖ·, callback(data): ¶Ô·µ»ØÊı¾İ´¦ÀíµÄ»Øµ÷º¯Êı}</code> ¿ªÆô</p>
+                                    <p>å¼‚æ­¥åŠ è½½</p>
+                                    <p><code>loading: 0</code> å…³é—­</p>
+                                    <p><code>loading: {url: è¯·æ±‚åœ°å€, callback(data): å¯¹è¿”å›æ•°æ®å¤„ç†çš„å›è°ƒå‡½æ•°}</code> å¼€å¯</p>
                                 </td>
                             </tr>
                             <tr>
@@ -172,43 +172,43 @@ AM("showWin", function() {
                                 <td>number</td>
                                 <td>0</td>
                                 <td>
-                                    <p>ÃÉ°æ</p>
-                                    <p><code>mask: 0</code> ¹Ø±Õ</p>
-                                    <p><code>mask: 1</code> ¿ªÆô</p>
+                                    <p>è’™ç‰ˆ</p>
+                                    <p><code>mask: 0</code> å…³é—­</p>
+                                    <p><code>mask: 1</code> å¼€å¯</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>button</td>
                                 <td>array</td>
-                                <td><code>[{}, {}, ¡­]</code></td>
+                                <td><code>[{}, {}, â€¦]</code></td>
                                 <td>
-                                    <p>°´Å¥</p>
-                                    <p><code>[{idname: ID, title: ÎÄ°¸, classname: class, callback: »Øµ÷}, {}, ¡­]</code></p>
+                                    <p>æŒ‰é’®</p>
+                                    <p><code>[{idname: ID, title: æ–‡æ¡ˆ, classname: class, callback: å›è°ƒ}, {}, â€¦]</code></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>callback</td>
                                 <td>function</td>
                                 <td><code>return true</code></td>
-                                <td>¹Ø±Õ°´Å¥»Øµ÷º¯Êı</td>
+                                <td>å…³é—­æŒ‰é’®å›è°ƒå‡½æ•°</td>
                             </tr>
                             <tr>
                                 <td>tips</td>
                                 <td>string</td>
                                 <td>''</td>
-                                <td>ÌáÊ¾</td>
+                                <td>æç¤º</td>
                             </tr>
                             <tr>
                                 <td>width</td>
                                 <td>string</td>
                                 <td>''</td>
-                                <td>¿í¶È</td>
+                                <td>å®½åº¦</td>
                             </tr>
                             <tr>
                                 <td>height</td>
                                 <td>string</td>
                                 <td>''</td>
-                                <td>¸ß¶È</td>
+                                <td>é«˜åº¦</td>
                             </tr>
                         </tbody>
                     </table>
@@ -220,7 +220,7 @@ AM("showWin", function() {
                     <div class="page-header">
                         <h1>
                             App.tips
-                            <small>ÌáÊ¾</small>
+                            <small>æç¤º</small>
                         </h1>
                     </div>
                     <h2>Usage</h2>
@@ -230,8 +230,8 @@ AM("showWin", function() {
 <pre class="prettyprint linenums">
 AM("showTips", function() {
     App.tips({
-        type: "ÀàĞÍ",
-        message: "ÄÚÈİ",
+        type: "ç±»å‹",
+        message: "å†…å®¹",
         ...
     });
 });
@@ -252,40 +252,40 @@ AM("showTips", function() {
                                 <td>string</td>
                                 <td>'right'</td>
                                 <td>
-                                    <p>ÀàĞÍ</p>
-                                    <p><code>type: 'right'</code> ÕıÈ·</p>
-                                    <p><code>type: 'warn'&nbsp;</code> ¾¯¸æ</p>
-                                    <p><code>type: 'error'</code> ´íÎó</p>
-                                    <p>¾¯¸æÓë´íÎóÎªÍ¬Ò»¿îÑùÊ½£¬½¨ÒéÓÅÏÈÊ¹ÓÃ <code>type: 'error'</code></p>
+                                    <p>ç±»å‹</p>
+                                    <p><code>type: 'right'</code> æ­£ç¡®</p>
+                                    <p><code>type: 'warn'&nbsp;</code> è­¦å‘Š</p>
+                                    <p><code>type: 'error'</code> é”™è¯¯</p>
+                                    <p>è­¦å‘Šä¸é”™è¯¯ä¸ºåŒä¸€æ¬¾æ ·å¼ï¼Œå»ºè®®ä¼˜å…ˆä½¿ç”¨ <code>type: 'error'</code></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>message</td>
                                 <td>string</td>
                                 <td>''</td>
-                                <td>ÄÚÈİ£¨Ö§³Ö HTML ±êÇ©£©</td>
+                                <td>å†…å®¹ï¼ˆæ”¯æŒ HTML æ ‡ç­¾ï¼‰</td>
                             </tr>
                             <tr>
                                 <td>autoclose</td>
                                 <td>number</td>
                                 <td>3</td>
-                                <td>¹Ø±ÕÊ±¼ä£¨µ¥Î»£ºÃë£©</td>
+                                <td>å…³é—­æ—¶é—´ï¼ˆå•ä½ï¼šç§’ï¼‰</td>
                             </tr>
                             <tr>
                                 <td>redirectUrl</td>
                                 <td>string</td>
                                 <td>''</td>
-                                <td>Ò³ÃæÌø×ª</td>
+                                <td>é¡µé¢è·³è½¬</td>
                             </tr>
                             <tr>
                                 <td>closeBtn</td>
                                 <td>boolean</td>
                                 <td>false</td>
                                 <td>
-                                    <p>¹Ø±Õ°´Å¥</p>
-                                    <p><code>closeBtn: true&nbsp;</code> ¿ªÆô</p>
-                                    <p><code>closeBtn: false</code> ¹Ø±Õ</p>
-                                    <p>µã»÷¹Ø±Õ°´Å¥Ö»»áÒşÈ¥ÌáÊ¾£¬²»×öÒ³ÃæÌø×ª¡£</p>
+                                    <p>å…³é—­æŒ‰é’®</p>
+                                    <p><code>closeBtn: true&nbsp;</code> å¼€å¯</p>
+                                    <p><code>closeBtn: false</code> å…³é—­</p>
+                                    <p>ç‚¹å‡»å…³é—­æŒ‰é’®åªä¼šéšå»æç¤ºï¼Œä¸åšé¡µé¢è·³è½¬ã€‚</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -298,7 +298,7 @@ AM("showTips", function() {
                     <div class="page-header">
                         <h1>
                             App.validate
-                            <small>ÑéÖ¤</small>
+                            <small>éªŒè¯</small>
                         </h1>
                     </div>
                     <h2>Usage</h2>
@@ -322,15 +322,15 @@ AM("validate", function() {
                                 <td>options</td>
                                 <td>object</td>
                                 <td><code>{rule: arg, ...}</code></td>
-                                <td>×éºÏÑéÖ¤£¬Ã¿×éÑéÖ¤Ö®¼äÎªÇÒµÄ¹ØÏµ</td>
+                                <td>ç»„åˆéªŒè¯ï¼Œæ¯ç»„éªŒè¯ä¹‹é—´ä¸ºä¸”çš„å…³ç³»</td>
                             </tr>
                         </tbody>
                     </table>
                     <h3>Methods</h3>
                     <div class="alert alert-info">
-                        <p>ÌáÊ¾£º</p>
-                        <p>±íÖĞ arg ±ê¼ÇÎª <span class="label">true</span> Ê±£¬¿ÉÖ±½ÓÒÔ <code>{rule: true}</code> ¸ñÊ½Ê¹ÓÃ</p>
-                        <p>ÑéÖ¤·½·¨¿É¸ù¾İĞèÇóÒÔ <code>{rule: arg, rule: arg, ...}</code> ¸ñÊ½ÈÎÒâ×éºÏ</p>
+                        <p>æç¤ºï¼š</p>
+                        <p>è¡¨ä¸­ arg æ ‡è®°ä¸º <span class="label">true</span> æ—¶ï¼Œå¯ç›´æ¥ä»¥ <code>{rule: true}</code> æ ¼å¼ä½¿ç”¨</p>
+                        <p>éªŒè¯æ–¹æ³•å¯æ ¹æ®éœ€æ±‚ä»¥ <code>{rule: arg, rule: arg, ...}</code> æ ¼å¼ä»»æ„ç»„åˆ</p>
                     </div>
                     <table class="table table-bordered table-striped">
                         <thead>
@@ -344,17 +344,17 @@ AM("validate", function() {
                             <tr>
                                 <td>required</td>
                                 <td><span class="label">true</span></td>
-                                <td>±ØÌî</td>
+                                <td>å¿…å¡«</td>
                             </tr>
                             <tr>
                                 <td>number</td>
                                 <td><span class="label">true</span></td>
-                                <td>Êı×Ö</td>
+                                <td>æ•°å­—</td>
                             </tr>
                             <tr>
                                 <td>email</td>
                                 <td><span class="label">true</span></td>
-                                <td>ÓÊÏä</td>
+                                <td>é‚®ç®±</td>
                             </tr>
                             <tr>
                                 <td>ip</td>
@@ -364,13 +364,13 @@ AM("validate", function() {
                             <tr>
                                 <td>mobile</td>
                                 <td><span class="label">true</span></td>
-                                <td>ÊÖ»ú</td>
+                                <td>æ‰‹æœº</td>
                             </tr>
                             <tr>
                                 <td>date</td>
                                 <td>'time' | ''</td>
                                 <td>
-                                    <p>ÈÕÆÚ¸ñÊ½</p>
+                                    <p>æ—¥æœŸæ ¼å¼</p>
                                     <p><code>{date: time}</code> yyyy-mm-dd hh:mm</p>
                                     <p><code>{date: ''}&nbsp;&nbsp;</code> yyyy-mm-dd</p>
                                 </td>
@@ -381,83 +381,83 @@ AM("validate", function() {
                                     <p>yyyy-mm-dd</p>
                                     <p>yyyy-mm-dd hh:mm</p>
                                 </td>
-                                <td>Ê±¼ä¼ä¸ô</td>
+                                <td>æ—¶é—´é—´éš”</td>
                             </tr>
                             <tr>
                                 <td>compare</td>
                                 <td>selector</td>
-                                <td>È«µÈ</td>
+                                <td>å…¨ç­‰</td>
                             </tr>
                             <tr>
                                 <td>min</td>
                                 <td>number</td>
-                                <td>×îĞ¡Öµ</td>
+                                <td>æœ€å°å€¼</td>
                             </tr>
                             <tr>
                                 <td>max</td>
                                 <td>number</td>
-                                <td>×î´óÖµ</td>
+                                <td>æœ€å¤§å€¼</td>
                             </tr>
                             <tr>
                                 <td>minlength</td>
                                 <td>number</td>
-                                <td>×îĞ¡³¤¶È</td>
+                                <td>æœ€å°é•¿åº¦</td>
                             </tr>
                             <tr>
                                 <td>maxlength</td>
                                 <td>number</td>
-                                <td>×î´ó³¤¶È</td>
+                                <td>æœ€å¤§é•¿åº¦</td>
                             </tr>
                             <tr>
                                 <td>integer</td>
                                 <td><span class="label">true</span></td>
-                                <td>ÕûÊı</td>
+                                <td>æ•´æ•°</td>
                             </tr>
                             <tr>
                                 <td>username</td>
                                 <td><span class="label">true</span></td>
-                                <td>ÓÃ»§Ãû£¨ºº×Ö¡¢×ÖÄ¸¡¢Êı×Ö¡¢ÏÂ»®Ïß£©</td>
+                                <td>ç”¨æˆ·åï¼ˆæ±‰å­—ã€å­—æ¯ã€æ•°å­—ã€ä¸‹åˆ’çº¿ï¼‰</td>
                             </tr>
                             <tr>
                                 <td>username_length</td>
                                 <td><span class="label">true</span></td>
-                                <td>ÓÃ»§Ãû£¨6 - 16 ¸ö×Ö·û£¬1 ¸öºº×ÖÎª 2 ¸ö×Ö·û£©</td>
+                                <td>ç”¨æˆ·åï¼ˆ6 - 16 ä¸ªå­—ç¬¦ï¼Œ1 ä¸ªæ±‰å­—ä¸º 2 ä¸ªå­—ç¬¦ï¼‰</td>
                             </tr>
                             <tr>
                                 <td>location</td>
                                 <td><span class="label">true</span></td>
-                                <td>ÓÃ»§Ãû£¨ºº×Ö¡¢×ÖÄ¸¡¢Êı×Ö£©</td>
+                                <td>ç”¨æˆ·åï¼ˆæ±‰å­—ã€å­—æ¯ã€æ•°å­—ï¼‰</td>
                             </tr>
                             <tr>
                                 <td>realname</td>
                                 <td><span class="label">true</span></td>
-                                <td>ÕæÊµĞÕÃû£¨ºº×Ö£©</td>
+                                <td>çœŸå®å§“åï¼ˆæ±‰å­—ï¼‰</td>
                             </tr>
                             <tr>
                                 <td>password</td>
                                 <td><span class="label">true</span></td>
-                                <td>ÃÜÂë£¨×Ö·û±àÂëµÄ·¶Î§£©</td>
+                                <td>å¯†ç ï¼ˆå­—ç¬¦ç¼–ç çš„èŒƒå›´ï¼‰</td>
                             </tr>
                             <tr>
                                 <td>pwd_strength</td>
                                 <td><span class="label">true</span></td>
                                 <td>
-                                    <p>ÃÜÂëÇ¿¶È£¨·µ»ØÊı×Ö 1 - 4 ·Ö±ğ¶ÔÓ¦ËÄ¸öÇ¿¶ÈµÈ¼¶£©</p>
-                                    <p><span class="label label-important">1£ºÈõ£¬ÕËºÅÈİÒ×±»µÁ£¡</span></p>
-                                    <p><span class="label label-warning">2£ºÖĞ£¬ÕËºÅ±È½Ï°²È«£¡</span></p>
-                                    <p><span class="label label-info">3£ºÇ¿£¬ÕËºÅ·Ç³£°²È«£¡</span></p>
-                                    <p><span class="label label-success">4£º·Ç³£Ç¿£¬ÕËºÅ¾ø¶Ô°²È«£¡</span></p>
+                                    <p>å¯†ç å¼ºåº¦ï¼ˆè¿”å›æ•°å­— 1 - 4 åˆ†åˆ«å¯¹åº”å››ä¸ªå¼ºåº¦ç­‰çº§ï¼‰</p>
+                                    <p><span class="label label-important">1ï¼šå¼±ï¼Œè´¦å·å®¹æ˜“è¢«ç›—ï¼</span></p>
+                                    <p><span class="label label-warning">2ï¼šä¸­ï¼Œè´¦å·æ¯”è¾ƒå®‰å…¨ï¼</span></p>
+                                    <p><span class="label label-info">3ï¼šå¼ºï¼Œè´¦å·éå¸¸å®‰å…¨ï¼</span></p>
+                                    <p><span class="label label-success">4ï¼šéå¸¸å¼ºï¼Œè´¦å·ç»å¯¹å®‰å…¨ï¼</span></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>tag</td>
                                 <td><span class="label">true</span></td>
-                                <td>±êÇ©£¨ºº×Ö¡¢×ÖÄ¸¡¢Êı×Ö¡¢ÈÎºÎ¿Õ°××Ö·û£¬°üÀ¨¿Õ¸ñ¡¢ÖÆ±í·û¡¢»»Ò³·ûµÈ£©</td>
+                                <td>æ ‡ç­¾ï¼ˆæ±‰å­—ã€å­—æ¯ã€æ•°å­—ã€ä»»ä½•ç©ºç™½å­—ç¬¦ï¼ŒåŒ…æ‹¬ç©ºæ ¼ã€åˆ¶è¡¨ç¬¦ã€æ¢é¡µç¬¦ç­‰ï¼‰</td>
                             </tr>
                             <tr>
                                 <td>douhao</td>
                                 <td><span class="label">true</span></td>
-                                <td>¶ººÅ</td>
+                                <td>é€—å·</td>
                             </tr>
                         </tbody>
                     </table>
@@ -469,7 +469,7 @@ AM("validate", function() {
                     <div class="page-header">
                         <h1>
                             App.slidePlayer
-                            <small>ÂÖ²¥</small>
+                            <small>è½®æ’­</small>
                         </h1>
                     </div>
                     <h2>Usage</h2>
@@ -480,9 +480,9 @@ AM("validate", function() {
 <pre class="prettyprint linenums">
 &lt;ul id="slide"&gt;
     &lt;li&gt;
-        &lt;a href="Á´½ÓµØÖ·" target="_blank"&gt;
-            &lt;img title="" alt="" src="Í¼Æ¬µØÖ·"/&gt;
-            &lt;span&gt;±êÌâ&lt;/span&gt;
+        &lt;a href="é“¾æ¥åœ°å€" target="_blank"&gt;
+            &lt;img title="" alt="" src="å›¾ç‰‡åœ°å€"/&gt;
+            &lt;span&gt;æ ‡é¢˜&lt;/span&gt;
         &lt;/a&gt;
     &lt;/li&gt;
     ...
@@ -492,8 +492,8 @@ AM("validate", function() {
 <pre class="prettyprint linenums">
 AM("slidePlayer", function() {
     App.tips(selector, {
-        width: "¿í¶È",
-        height: "¸ß¶È",
+        width: "å®½åº¦",
+        height: "é«˜åº¦",
         ...
     });
 });
@@ -513,31 +513,31 @@ AM("slidePlayer", function() {
                                 <td>selector</td>
                                 <td>string</td>
                                 <td>''</td>
-                                <td>ÂÖ²¥¶ÔÏó£¨jQuery Ñ¡ÔñÆ÷£©</td>
+                                <td>è½®æ’­å¯¹è±¡ï¼ˆjQuery é€‰æ‹©å™¨ï¼‰</td>
                             </tr>
                             <tr>
                                 <td>width</td>
                                 <td>string</td>
-                                <td>Í¼Æ¬¿í¶È</td>
-                                <td>ÂÖ²¥¿í¶È</td>
+                                <td>å›¾ç‰‡å®½åº¦</td>
+                                <td>è½®æ’­å®½åº¦</td>
                             </tr>
                             <tr>
                                 <td>height</td>
                                 <td>string</td>
-                                <td>Í¼Æ¬¸ß¶È</td>
-                                <td>ÂÖ²¥¸ß¶È</td>
+                                <td>å›¾ç‰‡é«˜åº¦</td>
+                                <td>è½®æ’­é«˜åº¦</td>
                             </tr>
                             <tr>
                                 <td>time</td>
                                 <td>string</td>
                                 <td>'3000'</td>
-                                <td>ÇĞ»»¼ä¸ô£¨µ¥Î»£ººÁÃë£©</td>
+                                <td>åˆ‡æ¢é—´éš”ï¼ˆå•ä½ï¼šæ¯«ç§’ï¼‰</td>
                             </tr>
                             <tr>
                                 <td>page</td>
                                 <td>number</td>
                                 <td>1</td>
-                                <td>³õÊ¼Ò³Êı</td>
+                                <td>åˆå§‹é¡µæ•°</td>
                             </tr>
                         </tbody>
                     </table>
@@ -549,7 +549,7 @@ AM("slidePlayer", function() {
                     <div class="page-header">
                         <h1>
                             App.calendar
-                            <small>ÈÕÀú</small>
+                            <small>æ—¥å†</small>
                         </h1>
                     </div>
                     <h2>Usage</h2>
@@ -562,7 +562,7 @@ AM("calendar", function() {
 });
 </pre>
                     <div class="alert alert-info">
-                        ¿ÉÒÔÍ¨¹ıÎª <code>input</code> ÔªËØÌí¼Ó <code>vaule</code> ÖµÀ´Ö¸¶¨ÈÕÀú³õÊ¼»¯Ê±¼ä£¬¸ñÊ½£º<code>yy-mm-dd</code>
+                        å¯ä»¥é€šè¿‡ä¸º <code>input</code> å…ƒç´ æ·»åŠ  <code>vaule</code> å€¼æ¥æŒ‡å®šæ—¥å†åˆå§‹åŒ–æ—¶é—´ï¼Œæ ¼å¼ï¼š<code>yy-mm-dd</code>
                     </div>
                     <h3>Options</h3>
                     <table class="table table-bordered table-striped">
@@ -579,32 +579,32 @@ AM("calendar", function() {
                                 <td>event</td>
                                 <td>object</td>
                                 <td></td>
-                                <td>ÊÂ¼ş¶ÔÏó <span class="label label-important">±ØÌîÏî</span></td>
+                                <td>äº‹ä»¶å¯¹è±¡ <span class="label label-important">å¿…å¡«é¡¹</span></td>
                             </tr>
                             <tr>
                                 <td>addtime</td>
                                 <td>number</td>
                                 <td>0</td>
                                 <td>
-                                    <p>ÏÔÊ¾Ê±¼ä</p>
-                                    <p>¿ªÆô£º<code>1</code></p>
-                                    <p>¹Ø±Õ£º<code>0</code></p>
+                                    <p>æ˜¾ç¤ºæ—¶é—´</p>
+                                    <p>å¼€å¯ï¼š<code>1</code></p>
+                                    <p>å…³é—­ï¼š<code>0</code></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>parentid</td>
                                 <td>string</td>
                                 <td>null</td>
-                                <td>µ¯´°ÖĞÊ¹ÓÃÊ±ĞèÖ¸¶¨Æä´°¿ÚID</td>
+                                <td>å¼¹çª—ä¸­ä½¿ç”¨æ—¶éœ€æŒ‡å®šå…¶çª—å£ID</td>
                             </tr>
                             <tr>
                                 <td>startdate</td>
                                 <td>string</td>
                                 <td></td>
                                 <td>
-                                    <p>Ê±¼äÉÏÏŞ</p>
-                                    <p>½ñÌì£º<code>today</code></p>
-                                    <p>¸ñÊ½£º<code>yy-mm-dd</code></p>
+                                    <p>æ—¶é—´ä¸Šé™</p>
+                                    <p>ä»Šå¤©ï¼š<code>today</code></p>
+                                    <p>æ ¼å¼ï¼š<code>yy-mm-dd</code></p>
                                 </td>
                             </tr>
                             <tr>
@@ -612,9 +612,9 @@ AM("calendar", function() {
                                 <td>string</td>
                                 <td></td>
                                 <td>
-                                    <p>Ê±¼äÏÂÏŞ</p>
-                                    <p>½ñÌì£º<code>today</code></p>
-                                    <p>¸ñÊ½£º<code>yy-mm-dd</code></p>
+                                    <p>æ—¶é—´ä¸‹é™</p>
+                                    <p>ä»Šå¤©ï¼š<code>today</code></p>
+                                    <p>æ ¼å¼ï¼š<code>yy-mm-dd</code></p>
                                 </td>
                             </tr>
                             <tr>
@@ -622,10 +622,10 @@ AM("calendar", function() {
                                 <td>function</td>
                                 <td></td>
                                 <td>
-                                    <p>»Øµ÷º¯Êı£¬µÚÒ»¸ö²ÎÊı·µ»ØÑ¡ÖĞÊ±¼ä</p>
-                                    <p>ÊÂ¼ş¶ÔÏó£º<code>this.event</code></p>
-                                    <p>Ä¿±ê¶ÔÏó£º<code>this.controlid</code></p>
-                                    <p>ÈÕÀú¶ÔÏó£º<code>this.calendar</code></p>
+                                    <p>å›è°ƒå‡½æ•°ï¼Œç¬¬ä¸€ä¸ªå‚æ•°è¿”å›é€‰ä¸­æ—¶é—´</p>
+                                    <p>äº‹ä»¶å¯¹è±¡ï¼š<code>this.event</code></p>
+                                    <p>ç›®æ ‡å¯¹è±¡ï¼š<code>this.controlid</code></p>
+                                    <p>æ—¥å†å¯¹è±¡ï¼š<code>this.calendar</code></p>
                                 </td>
                             </tr>
                         </tbody>
@@ -638,7 +638,7 @@ AM("calendar", function() {
                     <div class="page-header">
                         <h1>
                             App.header
-                            <small>µ¼º½</small>
+                            <small>å¯¼èˆª</small>
                         </h1>
                     </div>
                     <h2>Usage</h2>
@@ -655,28 +655,28 @@ AM("header", function() {
                     <div class="page-header">
                         <h1>
                             App.login
-                            <small>µÇÂ¼</small>
+                            <small>ç™»å½•</small>
                         </h1>
                     </div>
                     <h2>Usage</h2>
 <pre class="prettyprint linenums">
 AM("login", function() {
     App.login({
-        isLogin: "µÇÂ¼×´Ì¬",
-        host: "µ±Ç°ÓòÃû",
+        isLogin: "ç™»å½•çŠ¶æ€",
+        host: "å½“å‰åŸŸå",
         ...
     });
 });
 </pre>
                     <div class="alert alert-info">
-                        <p>³õÊ¼»¯µÇÂ¼×é¼şºó£¬ÎªÁ´½ÓÌí¼Ó <code>class="J_login"</code> À´ÊµÏÖÃ°ÅİÊÂ¼ş°ó¶¨¡£</p>
-                        <p>ÓÃ»§´¦ÓÚµÇÂ¼×´Ì¬£¬µã»÷Á´½ÓÊ±°´ÒÔÏÂÓÅÏÈ¼¶½øĞĞ´¦Àí£º</p>
-                        <p>1. Ìø×ª <code>href</code> µØÖ·</p>
-                        <p>2. Ö´ĞĞ <code>data-callback</code> º¯Êı£¬²¢½«µ±Ç°µã»÷¶ÔÏóµ±×÷µÚÒ»¸ö²ÎÊı´«Èë</p>
-                        <p>3. Ë¢ĞÂµ±Ç°Ò³Ãæ</p>
+                        <p>åˆå§‹åŒ–ç™»å½•ç»„ä»¶åï¼Œä¸ºé“¾æ¥æ·»åŠ  <code>class="J_login"</code> æ¥å®ç°å†’æ³¡äº‹ä»¶ç»‘å®šã€‚</p>
+                        <p>ç”¨æˆ·å¤„äºç™»å½•çŠ¶æ€ï¼Œç‚¹å‡»é“¾æ¥æ—¶æŒ‰ä»¥ä¸‹ä¼˜å…ˆçº§è¿›è¡Œå¤„ç†ï¼š</p>
+                        <p>1. è·³è½¬ <code>href</code> åœ°å€</p>
+                        <p>2. æ‰§è¡Œ <code>data-callback</code> å‡½æ•°ï¼Œå¹¶å°†å½“å‰ç‚¹å‡»å¯¹è±¡å½“ä½œç¬¬ä¸€ä¸ªå‚æ•°ä¼ å…¥</p>
+                        <p>3. åˆ·æ–°å½“å‰é¡µé¢</p>
                     </div>
 <pre class="prettyprint linenums">
-&lt;a class="J_login" href="Ìø×ª" data-title="±êÌâ" data-ttname="×¢²áÀ´Ô´" data-callback="»Øµ÷"&gt;µÇÂ¼&lt;/a&gt;
+&lt;a class="J_login" href="è·³è½¬" data-title="æ ‡é¢˜" data-ttname="æ³¨å†Œæ¥æº" data-callback="å›è°ƒ"&gt;ç™»å½•&lt;/a&gt;
 </pre>
                     <h3>Options</h3>
                     <table class="table table-bordered table-striped">
@@ -693,22 +693,22 @@ AM("login", function() {
                                 <td>isLogin</td>
                                 <td>boolean</td>
                                 <td>false</td>
-                                <td>µÇÂ¼×´Ì¬</td>
+                                <td>ç™»å½•çŠ¶æ€</td>
                             </tr>
                             <tr>
                                 <td>host</td>
                                 <td>string</td>
                                 <td>'http://www.19lou.com'</td>
-                                <td>µ±Ç°ÓòÃû</td>
+                                <td>å½“å‰åŸŸå</td>
                             </tr>
                             <tr>
                                 <td>qqLogin</td>
                                 <td>boolean</td>
                                 <td>true</td>
                                 <td>
-                                    <p>QQ µÇÂ¼</p>
-                                    <p><code>qqLogin: true&nbsp;</code> ¿ªÆô</p>
-                                    <p><code>qqLogin: false</code> ¹Ø±Õ</p>
+                                    <p>QQ ç™»å½•</p>
+                                    <p><code>qqLogin: true&nbsp;</code> å¼€å¯</p>
+                                    <p><code>qqLogin: false</code> å…³é—­</p>
                                 </td>
                             </tr>
                             <tr>
@@ -716,9 +716,9 @@ AM("login", function() {
                                 <td>boolean</td>
                                 <td>true</td>
                                 <td>
-                                    <p>ĞÂÀËµÇÂ¼</p>
-                                    <p><code>sinaLogin: true&nbsp;</code> ¿ªÆô</p>
-                                    <p><code>sinaLogin: false</code> ¹Ø±Õ</p>
+                                    <p>æ–°æµªç™»å½•</p>
+                                    <p><code>sinaLogin: true&nbsp;</code> å¼€å¯</p>
+                                    <p><code>sinaLogin: false</code> å…³é—­</p>
                                 </td>
                             </tr>
                             <tr>
@@ -726,9 +726,9 @@ AM("login", function() {
                                 <td>boolean</td>
                                 <td>true</td>
                                 <td>
-                                    <p>ÌÔ±¦µÇÂ¼</p>
-                                    <p><code>taobaoLogin: true&nbsp;</code> ¿ªÆô</p>
-                                    <p><code>taobaoLogin: false</code> ¹Ø±Õ</p>
+                                    <p>æ·˜å®ç™»å½•</p>
+                                    <p><code>taobaoLogin: true&nbsp;</code> å¼€å¯</p>
+                                    <p><code>taobaoLogin: false</code> å…³é—­</p>
                                 </td>
                             </tr>
                             <tr>
@@ -736,9 +736,9 @@ AM("login", function() {
                                 <td>boolean</td>
                                 <td>true</td>
                                 <td>
-                                    <p>360 µÇÂ¼</p>
-                                    <p><code>qihooLogin: true&nbsp;</code> ¿ªÆô</p>
-                                    <p><code>qihooLogin: false</code> ¹Ø±Õ</p>
+                                    <p>360 ç™»å½•</p>
+                                    <p><code>qihooLogin: true&nbsp;</code> å¼€å¯</p>
+                                    <p><code>qihooLogin: false</code> å…³é—­</p>
                                 </td>
                             </tr>
                             <tr>
@@ -746,9 +746,9 @@ AM("login", function() {
                                 <td>number</td>
                                 <td>-1</td>
                                 <td>
-                                    <p>µÇÂ¼Òıµ¼£¨µ¥Î»£ºÃë£©</p>
-                                    <p><code>guide: -1</code> ²»ÏÔÊ¾</p>
-                                    <p><code>guide: 3&nbsp;</code> 3ÃëºóÏÔÊ¾</p>
+                                    <p>ç™»å½•å¼•å¯¼ï¼ˆå•ä½ï¼šç§’ï¼‰</p>
+                                    <p><code>guide: -1</code> ä¸æ˜¾ç¤º</p>
+                                    <p><code>guide: 3&nbsp;</code> 3ç§’åæ˜¾ç¤º</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -761,36 +761,36 @@ AM("login", function() {
                     <div class="page-header">
                         <h1>
                             AJAX
-                            <small>Òì²½ÇëÇó</small>
+                            <small>å¼‚æ­¥è¯·æ±‚</small>
                         </h1>
                     </div>
                     <h2>Usage</h2>
 <pre class="prettyprint linenums">
 $.ajax({
-    type: "ÇëÇó·½Ê½",
-    url:  "ÇëÇóµØÖ·",
-    data: "·¢ËÍµ½·şÎñÆ÷µÄÊı¾İ",
+    type: "è¯·æ±‚æ–¹å¼",
+    url:  "è¯·æ±‚åœ°å€",
+    data: "å‘é€åˆ°æœåŠ¡å™¨çš„æ•°æ®",
     success: function(res) {
-        // ÇëÇó³É¹¦ºóµÄ»Øµ÷º¯Êı£¬resÎª·şÎñÆ÷·µ»ØÊı¾İ
+        // è¯·æ±‚æˆåŠŸåçš„å›è°ƒå‡½æ•°ï¼Œresä¸ºæœåŠ¡å™¨è¿”å›æ•°æ®
     }
     ...
 });
 </pre>
-<div class="alert alert-info">ÒÔÉÏÊÇ <code>$.ajax</code> µÄ´«Í³Ğ´·¨£¬1.5.0 °æ±¾ºó <code>$.ajax</code> ·µ»ØµÄÊÇ deferred ¶ÔÏó£¬¿ÉÒÔ×öÈçÏÂÁ´Ê½²Ù×÷£º</div>
+<div class="alert alert-info">ä»¥ä¸Šæ˜¯ <code>$.ajax</code> çš„ä¼ ç»Ÿå†™æ³•ï¼Œ1.5.0 ç‰ˆæœ¬å <code>$.ajax</code> è¿”å›çš„æ˜¯ deferred å¯¹è±¡ï¼Œå¯ä»¥åšå¦‚ä¸‹é“¾å¼æ“ä½œï¼š</div>
 <pre class="prettyprint linenums">
 $.when(
     $.ajax({
-        type: "ÇëÇó·½Ê½",
-        url:  "ÇëÇóµØÖ·",
-        data: "·¢ËÍµ½·şÎñÆ÷µÄÊı¾İ"
+        type: "è¯·æ±‚æ–¹å¼",
+        url:  "è¯·æ±‚åœ°å€",
+        data: "å‘é€åˆ°æœåŠ¡å™¨çš„æ•°æ®"
         ...
     })
 ).done(function(res) {
-    // ÇëÇó³É¹¦ºóµÄ»Øµ÷º¯Êı£¬resÎª·şÎñÆ÷·µ»ØÊı¾İ
+    // è¯·æ±‚æˆåŠŸåçš„å›è°ƒå‡½æ•°ï¼Œresä¸ºæœåŠ¡å™¨è¿”å›æ•°æ®
 });
 </pre>
                     <h3>Options</h3>
-                    <div class="alert alert-info">ÒÔÏÂÖ»ÁĞ¾Ù <code>$.ajax</code> µÄ³£ÓÃÅäÖÃÏî£¬ÍêÕûÎÄµµÇë <a href="http://jqapi.com/#p=jQuery.ajax" target="_blank">µã»÷ÕâÀï</a> ²é¿´¡£</div>
+                    <div class="alert alert-info">ä»¥ä¸‹åªåˆ—ä¸¾ <code>$.ajax</code> çš„å¸¸ç”¨é…ç½®é¡¹ï¼Œå®Œæ•´æ–‡æ¡£è¯· <a href="http://jqapi.com/#p=jQuery.ajax" target="_blank">ç‚¹å‡»è¿™é‡Œ</a> æŸ¥çœ‹ã€‚</div>
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
@@ -806,15 +806,15 @@ $.when(
                                 <td>string</td>
                                 <td>'GET'</td>
                                 <td>
-                                    <p>ÇëÇó·½Ê½£¬'POST' »ò 'GET'</p>
+                                    <p>è¯·æ±‚æ–¹å¼ï¼Œ'POST' æˆ– 'GET'</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>url</td>
                                 <td>string</td>
-                                <td>µ±Ç°µØÖ·</td>
+                                <td>å½“å‰åœ°å€</td>
                                 <td>
-                                    <p>ÇëÇóµØÖ·</p>
+                                    <p>è¯·æ±‚åœ°å€</p>
                                 </td>
                             </tr>
                             <tr>
@@ -822,7 +822,7 @@ $.when(
                                 <td>object | string</td>
                                 <td></td>
                                 <td>
-                                    <p>·¢ËÍµ½·şÎñÆ÷µÄÊı¾İ</p>
+                                    <p>å‘é€åˆ°æœåŠ¡å™¨çš„æ•°æ®</p>
                                 </td>
                             </tr>
                             <tr>
@@ -830,8 +830,8 @@ $.when(
                                 <td>function | array</td>
                                 <td></td>
                                 <td>
-                                    <p>ÇëÇó³É¹¦ºóµÄ»Øµ÷º¯Êı</p>
-                                    <p>¿ÉÒÔ½ÓÊÜÒ»¸öº¯ÊıÊı×é£¬Ã¿¸öº¯Êı½«±»ÒÀ´Îµ÷ÓÃ¡£</p>
+                                    <p>è¯·æ±‚æˆåŠŸåçš„å›è°ƒå‡½æ•°</p>
+                                    <p>å¯ä»¥æ¥å—ä¸€ä¸ªå‡½æ•°æ•°ç»„ï¼Œæ¯ä¸ªå‡½æ•°å°†è¢«ä¾æ¬¡è°ƒç”¨ã€‚</p>
                                 </td>
                             </tr>
                         </tbody>
