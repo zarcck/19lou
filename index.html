@@ -840,27 +840,25 @@ $.when(
                     </table>
                 </section>
                 <!--=E AJAX -->
-				<!--=S drap-->	
+				<!--=S drag-->	
                 <section id="drag">
 					<div class="page-header">
 						<h1>App.drag<small>拖拽</small></h1>
 						
 					</div>
 					<h2>Usage</h2>
-					<div class="bs-docs-example">
-						<div id="dragDemo" style="position:relative;border:1px solid #f00;width:200px;height:50px;text-align:center;z-index:999">
-
-							大~大~大王，请点击拖拽人家嘛~~~
-						</div>
-						<script src="js/drags.js"></script>
-						<script>
-							$(function(){
-								$('#dragDemo').jqDrag();
-							});
-						</script>
-					</div>
-<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">$</span><span class="pun">(</span><span class="str">selector</span><span class="pun">)</span><span class="pun">.</span><span class="kwd">jqDrap</span><span class="pun">(child-selector)</span></li></ol></pre>		
-<table class="table table-bordered table-striped">
+<pre class="prettyprint linenums">
+AM("drag", function() {
+    App.drag({
+        obj: '',
+        vertical: true,
+        opacity: .5,
+        target: [],
+        func: ''
+    });
+});
+</pre>		
+					<table class="table table-bordered table-striped">
                         <thead>
                             <tr>
                                 <th style="width:100px;">Name</th>
@@ -871,19 +869,43 @@ $.when(
                         </thead>
                         <tbody>
                             <tr>
-                                <td>selector</td>
-                                <td>string</td>
-                                <td>必须</td>
-                                <td>
-                                    <p>需要拖拽的父级标志符如:#id,.class</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>child-selector</td>
+                                <td>obj</td>
                                 <td>string</td>
                                 <td>可选</td>
                                 <td>
-                                    <p>用于触发拖拽的元素</p>
+                                    <p>可以拖拽区域的标志符如:#id,.class</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>vertical</td>
+                                <td>boolean</td>
+                                <td>可选</td>
+                                <td>
+                                    <p>垂直拖拽还是水平拖拽</p>
+                                </td>
+                            </tr>
+							<tr>
+                                <td>opacity</td>
+                                <td>数字</td>
+                                <td>可选</td>
+                                <td>
+                                    <p>拖拽时候对象的透明度</p>
+                                </td>
+                            </tr>
+							<tr>
+                                <td>target</td>
+                                <td>array</td>
+                                <td>可选</td>
+                                <td>
+                                    <p>拖动目标位置</p>
+                                </td>
+                            </tr>
+							<tr>
+                                <td>func</td>
+                                <td>function</td>
+                                <td>可选</td>
+                                <td>
+                                    <p>拖拽完毕以后的回调函数</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -892,23 +914,9 @@ $.when(
                         <p>在未指定<code>child-selector</code>子元素的情况下，拖拽事件将在事件对象上直接触发~该元素<code>selector</code>整个范围内有效</p>
 						<p>在指定子元素后，拖拽事件将在指定的元素上触发，而不是元素对象<code>selector</code>的整个范围内</p>	
                     </div>					
-	</section>
-	<!--=E drap-->
-	<!--=S popo-->
-		<section id="popo">
-			<div class="page-header">
-				<h1>App.popo<small>气泡</small><h1>
-			</div>
-			
-			<div class="bs-docs-example">
-				<a href="#" class="btn">demo</a><br />
-				<p>这里放置其他东西</p>
-			</div>
-			<div class="prettyprint linenums">
-<ol class="linenums"><li class="L0"><ol class="linenums"><li class="L0"><span class="pln"><span class="pln">AM</span></span><span class="pun"><span class="pun">(</span></span><span class="str"><span class="str">"login"</span></span><span class="pun"><span class="pun">,</span></span><span class="pln"><span class="pln"> </span></span><span class="kwd"><span class="kwd">function</span></span><span class="pun"><span class="pun">()</span></span><span class="pln"><span class="pln"> </span></span><span class="pun"><span class="pun">{</span></span></li><li class="L1"><span class="pln"><span class="pln">    </span></span><span class="typ"><span class="typ">App</span></span><span class="pun"><span class="pun">.</span></span><span class="pln"><span class="pln">login</span></span><span class="pun"><span class="pun">({</span></span></li><li class="L2"><span class="pln"><span class="pln">        isLogin</span></span><span class="pun"><span class="pun">:</span></span><span class="pln"><span class="pln"> </span></span><span class="str"><span class="str">"登录状态"</span></span><span class="pun"><span class="pun">,</span></span></li><li class="L3"><span class="pln"><span class="pln">        host</span></span><span class="pun"><span class="pun">:</span></span><span class="pln"><span class="pln"> </span></span><span class="str"><span class="str">"当前域名"</span></span><span class="pun"><span class="pun">,</span></span></li><li class="L4"><span class="pln"><span class="pln">        </span></span><span class="pun"><span class="pun">...</span></span></li><li class="L5"><span class="pln"><span class="pln">    </span></span><span class="pun"><span class="pun">});</span></span></li><li class="L6"><span class="pun"><span class="pun">});</span></span></li></ol></li></ol>				
-			</div>
-		</section>
-         <!--=E popo-->       
+				</section>
+				<!--=E drag-->
+     
             </div>
         </div>
     </div>
