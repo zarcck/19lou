@@ -1,0 +1,278 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>19lou ui library</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="./index.html">19lou ui library</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li><a href="./index.html">js基础模块</a></li>
+                        <li><a href="./base-css.html">内容块基本样式结构</a></li>
+						<li class="active"><a href="./code.html">代码书写规范</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="span3 bs-docs-sidebar">
+                <ul class="nav nav-list bs-docs-sidenav affix">
+                    <li class="active"><a href="#standard"><i class="icon-chevron-right"></i> 命名规范</a></li>
+                    <li><a href="#doctype"><i class="icon-chevron-right"></i> DOCTYPE</a></li>
+                    <li><a href="#order"><i class="icon-chevron-right"></i> CSS书写顺序</a></li>
+                    <li><a href="#abridge"><i class="icon-chevron-right"></i> CSS缩写</a></li>
+					<li><a href="#compatibility"><i class="icon-chevron-right"></i> hack写法</a></li>
+					<li><a href="#css3"><i class="icon-chevron-right"></i> 常用css3兼容性写法</a></li>
+                </ul>
+            </div>
+            <div class="span9">
+            
+                <!--=S standard -->
+                <section id="standard">
+                    <div class="page-header">
+                        <h1>
+                            命名规范
+                        </h1>
+                    </div>
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <td><strong>页眉</strong></td>
+                                <td>header</td>
+                                <td><strong>内容</strong></td>
+                                <td>content</td>
+								<td><strong>容器</strong></td>
+                                <td>contenter</td>
+                            </tr>
+							<tr>
+                                <td><strong>页脚</strong></td>
+                                <td>footer</td>
+                                <td><strong>版权</strong></td>
+                                <td>copyright</td>
+								<td><strong>导航</strong></td>
+                                <td>menu</td>
+                            </tr>
+							<tr>
+                                <td><strong>主导航</strong></td>
+                                <td>mainMenu</td>
+                                <td><strong>子导航</strong></td>
+                                <td>subMenu</td>
+								<td><strong>标志</strong></td>
+                                <td>logo</td>
+                            </tr>
+							<tr>
+                                <td><strong>标语</strong></td>
+                                <td>banner</td>
+                                <td><strong>标题</strong></td>
+                                <td>title</td>
+								<td><strong>侧边栏</strong></td>
+                                <td>sidebar</td>
+                            </tr>
+							<tr>
+                                <td><strong>图标</strong></td>
+                                <td>icon</td>
+                                <td><strong>注释</strong></td>
+                                <td>note</td>
+								<td><strong>搜索</strong></td>
+                                <td>search</td>
+                            </tr>
+							<tr>
+                                <td><strong>按钮</strong></td>
+                                <td>button</td>
+                                <td><strong>登陆</strong></td>
+                                <td>login</td>
+								<td><strong>链接</strong></td>
+                                <td>link</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!--=E standard -->
+                
+                <!--=S doctype -->
+                <section id="doctype">
+                    <div class="page-header">
+                        <h1>
+                            doctype
+                        </h1>
+                    </div>
+					<table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>content</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <
+								!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> </td>
+                                <td>要求非常宽松的DTD，它允许你继续使用HTML4.01的标识,目前应用比较多的doctype</td>
+                            </tr>
+                            <tr>
+                                <td><
+								!DOCTYPE html></td>
+                                <td>html5时代的doctype,目前杭州站和城市站首页都应用了这种声明，为了使用html5标签</td>
+                            </tr>
+                        </tbody>
+                    </table>
+					<div class="alert alert-info">用时把<
+								!中间空格去掉</div>
+                </section>
+                <!--=E doctype -->
+                
+                <!--=S order -->
+                <section id="order">
+                    <div class="page-header">
+                        <h1>
+                            CSS书写顺序
+                        </h1>
+                    </div>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th>content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>显示属性</td>
+                                <td>display | position | float | clear | cursor ...</td>
+                            </tr>
+                            <tr>
+                                <td>盒模型</td>
+                                <td>margin | padding | width | height</td>
+                            </tr>
+							<tr>
+                                <td>文本属性</td>
+                                <td>vertical-align | white-space | text-decoration | text-align | color | font | content ...</td>
+                            </tr>
+							<tr>
+                                <td>边框背景</td>
+                                <td>border | background</td>
+                            </tr>
+							<tr>
+                                <td>内容管理、层级</td>
+                                <td>overflow | z-index | zoom</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!--=E order -->
+                
+                <!--=S abridge -->
+                <section id="abridge">
+                    <div class="page-header">
+                        <h1>
+                            css缩写
+                        </h1>
+                    </div>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th>content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>border</td>
+                                <td>{border:1px solid #333;}</td>
+                            </tr>
+                            <tr>
+                                <td>background</td>
+                                <td>{background:#333 url() no-repeat 50% 50%;}</td>
+                            </tr>
+							<tr>
+                                <td>margin,padding</td>
+                                <td>{margin:5px 6px 7px 8px;padding:5px 6px 7px 8px} <br />如果四个值一样，更精简的{margin:5px;padding:5px;}</td>
+                            </tr>
+							<tr>
+                                <td>font</td>
+                                <td>{font:700 12px/18px 'microsoft yahei';}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!--=E abridge -->
+				
+				<!--=S compatibility -->
+                <section id="compatibility">
+                    <div class="page-header">
+                        <h1>
+                            hack写法
+                        </h1>
+                    </div>
+<pre class="prettyprint linenums">
+#test{width:10px;}
+#test{width:8px\9\0;} /* IE9 */
+:root #test{width:8px;} /* IE9,OPERA */
+:root #test{width:8px\0;} /* IE9 */
+#test{width:8px\0;} /* IE8+ */ 
+#test{width:8px\9;} /* IE6+ */
+#test{*width:6px;}  /* IE6、7 */
+#test{_width:5px;}  /* IE6 */
+</pre>
+                </section>
+                <!--=E compatibility -->
+				
+				<!--=S css3 -->
+                <section id="css3">
+                    <div class="page-header">
+                        <h1>
+                            常用css3兼容性写法
+                        </h1>
+                    </div>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th>content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>opacity(会改变内部元素透明度)</td>
+                                <td>{opacity:0.4;filter:alpha(opacity=40);}</td>
+                            </tr>
+							<tr>
+                                <td>opacity(不会改变内部元素透明度)</td>
+                                <td>{background:rgba(255,255,255,.8);filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#ccffffff',endColorstr='#ccffffff');}</td>
+                            </tr>
+							<tr>
+                                <td>gradient</td>
+                                <td>{background:#f1a400;background:-webkit-linear-gradient(top, #eaa400, #f1a400);background:-moz-linear-gradient(top, #eaa400, #f1a400);}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!--=E css3 -->
+                
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/prettify.js"></script>
+    <script type="text/javascript">
+        window.prettyPrint && prettyPrint();
+    </script>
+</body>
+</html>
