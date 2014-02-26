@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
+О╩©<!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="gb2312">
+    <meta charset="utf-8">
     <title>calendar - 19lou ui library</title>
     <link href="http://i3.sbsnew.com/trunk/css/forum/default/common.css" rel="stylesheet">
     <script type="text/javascript">
@@ -15,25 +15,29 @@
         <!--=S calendar -->
         <ul>
         	<li class="mb10">
-                д╛хосц╥╗ё╨<input type="text" class="J_calendar txt"/>
+                И╩≤Х╝╓Г■╗ФЁ∙О╪ <input type="text" class="J_calendar txt"/>
             </li>
         	<li class="mb10">
-                ж╦╤╗хуфзё╨<input type="text" class="J_calendar txt" value="1987-07-17"/>
+                Ф▄┤Е╝ Ф≈╔Ф°÷О╪ <input type="text" class="J_calendar txt" value="1987-07-17"/>
             </li>
         	<li class="mb10">
-                отй╬й╠╪Дё╨<input type="text" class="J_calendar txt" data-type="show-time"/>
+                Ф≤╬Г╓╨Ф≈╤И≈╢О╪ <input type="text" class="J_calendar txt" data-type="show-time"/>
             </li>
         	<li class="mb10">
-                й╠╪Диоочё╨<input type="text" class="J_calendar txt" data-type="prev-limit"/> ё╗фа╠н 1987-07-17 ртг╟ё╘
+                Ф≈╤И≈╢Д╦┼И≥░О╪ <input type="text" class="J_calendar txt" data-type="prev-limit"/> О╪┬Е╠▐Х■╫ 1987-07-17 
+
+Д╩╔Е┴█О╪┴
             </li>
         	<li class="mb10">
-                й╠╪Добочё╨<input type="text" class="J_calendar txt" data-type="next-limit"/> ё╗фа╠н 1987-07-17 рт╨Сё╘
+                Ф≈╤И≈╢Д╦▀И≥░О╪ <input type="text" class="J_calendar txt" data-type="next-limit"/> О╪┬Е╠▐Х■╫ 1987-07-17 
+
+Д╩╔Е░▌О╪┴
             </li>
         	<li class="mb10">
-                ╩ь╣В╨╞йЩё╨<input type="text" class="J_calendar txt" data-type="callback"/>
+                Е⌡·Х╟┐Е┤╫Ф∙╟О╪ <input type="text" class="J_calendar txt" data-type="callback"/>
             </li>
         </ul>
-        <a href="javascript:;" id="J_win" class="submit-btn"><span>╣╞╢╟хуюЗ</span></a>
+        <a href="javascript:;" id="J_win" class="submit-btn"><span>Е╪╧Г╙≈Ф≈╔Е▌├</span></a>
         <!--=E calendar -->
     </div>
     <br/><br/><br/><br/><br/><br/><br/>
@@ -88,14 +92,16 @@
         
         AM("showWin", function() {
         
-            <!--=S ╣╞╢╟хуюЗ -->
+            <!--=S Е╪╧Г╙≈Ф≈╔Е▌├ -->
             $("#J_win").click(function() {
                 var buffer = [
                     '<table class="win-table">',
                         '<tbody>',
                             '<tr>',
-                                '<th><label for="subject">я║тЯй╠╪Дё╨</label></th>',
-                                '<td><input type="text" id="subject" class="J_calendar txt" tabindex="1" data-type="window"/></td>',
+                                '<th><label for="subject">И─┴Ф▀╘Ф≈╤И≈╢О╪ </label></th>',
+                                '<td><input type="text" id="subject" class="J_calendar txt" tabindex="1" data-
+
+type="window"/></td>',
                             '</tr>',
                         '</tbody>',
                     '</table>'
@@ -103,13 +109,13 @@
                 
                 App.win({
                     id: "J_winCalendar",
-                    title: "╣╞╢╟хуюЗ",
+                    title: "Е╪╧Г╙≈Ф≈╔Е▌├",
                     content: buffer,
                     width: 350,
                     height: 350
                 });
             });
-            <!--=E ╣╞╢╟хуюЗ -->
+            <!--=E Е╪╧Г╙≈Ф≈╔Е▌├ -->
             
         });
     </script>
