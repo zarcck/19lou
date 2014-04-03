@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="gb2312">
+    <meta charset="utf-8">
     <title>win - 19lou ui library</title>
     <link href="http://i3.sbsnew.com/trunk/css/forum/default/common.css" rel="stylesheet">
     <script type="text/javascript">
@@ -13,43 +13,43 @@
 <body>
     <div class="layout mt10 tc">
         <!--=S win -->
-        <a href="javascript:;" id="form" class="submit-btn"><span>ÁĞ±íµ¯´°</span></a>
-        <a href="javascript:;" id="table" class="submit-btn"><span>±í¸ñµ¯´°</span></a>
-        <a href="javascript:;" id="data" class="submit-btn"><span>Êı¾İµ¯´°</span></a>
-        <a href="javascript:;" id="alert" class="submit-btn"><span>ÌáÊ¾µ¯´°</span></a>
+        <a href="javascript:;" id="form" class="submit-btn"><span>åˆ—è¡¨å¼¹çª—</span></a>
+        <a href="javascript:;" id="table" class="submit-btn"><span>è¡¨æ ¼å¼¹çª—</span></a>
+        <a href="javascript:;" id="data" class="submit-btn"><span>æ•°æ®å¼¹çª—</span></a>
+        <a href="javascript:;" id="alert" class="submit-btn"><span>æç¤ºå¼¹çª—</span></a>
         <!--=E win -->
     </div>
     <script type="text/javascript">
         AM("showWin", function() {
             
-            <!--=S ÁĞ±íµ¯´° -->
+            <!--=S åˆ—è¡¨å¼¹çª— -->
             $("#form").click(function() {
                 var buffer = [
                     '<ul class="win-form">',
-                        '<li><label class="lab">¸½¼ş£º</label>logo.png</li>',
-                        '<li><label class="lab">ÊÛ¼Û£º</label>1</li>',
-                        '<li><label class="lab">Óà¶î£º</label>10</li>',
+                        '<li><label class="lab">é™„ä»¶ï¼š</label>logo.png</li>',
+                        '<li><label class="lab">å”®ä»·ï¼š</label>1</li>',
+                        '<li><label class="lab">ä½™é¢ï¼š</label>10</li>',
                     '</ul>'
                 ].join("");
                 
                 App.win({
-                    title: "ÁĞ±íµ¯´°",
+                    title: "åˆ—è¡¨å¼¹çª—",
                     content: buffer
                 });
             });
-            <!--=E ÁĞ±íµ¯´° -->
+            <!--=E åˆ—è¡¨å¼¹çª— -->
             
-            <!--=S ±í¸ñµ¯´° -->
+            <!--=S è¡¨æ ¼å¼¹çª— -->
             $("#table").click(function() {
                 var buffer = [
                     '<table class="win-table">',
                         '<tbody>',
                             '<tr>',
-                                '<th><label for="subject">±êÌâ£º</label></th>',
+                                '<th><label for="subject">æ ‡é¢˜ï¼š</label></th>',
                                 '<td><input type="text" id="subject" class="txt" tabindex="1"/></td>',
                             '</tr>',
                             '<tr>',
-                                '<th><label for="content">ÄÚÈİ£º</label></th>',
+                                '<th><label for="content">å†…å®¹ï¼š</label></th>',
                                 '<td><textarea id="content" class="txt" tabindex="2"></textarea></td>',
                             '</tr>',
                         '</tbody>',
@@ -57,56 +57,56 @@
                 ].join("");
                 
                 App.win({
-                    title: "±í¸ñµ¯´°",
+                    title: "è¡¨æ ¼å¼¹çª—",
                     content: buffer,
                     width: 400
                 });
             });
-            <!--=E ±í¸ñµ¯´° -->
+            <!--=E è¡¨æ ¼å¼¹çª— -->
             
-            <!--=S Êı¾İµ¯´° -->
+            <!--=S æ•°æ®å¼¹çª— -->
             $("#data").click(function() {
                 var buffer = [
                     '<ul class="win-data">',
-                        '<li>°×Ñò×ù</li>',
-                        '<li>½ğÅ£×ù</li>',
-                        '<li>Ë«×Ó×ù</li>',
-                        '<li>¾ŞĞ·×ù</li>',
-                        '<li>Ê¨×Ó×ù</li>',
-                        '<li>´¦Å®×ù</li>',
-                        '<li>Ìì³Ó×ù</li>',
-                        '<li>ÌìĞ«×ù</li>',
-                        '<li>ÈËÂí×ù</li>',
-                        '<li>Ä¦ôÉ×ù</li>',
-                        '<li>±¦Æ¿×ù</li>',
-                        '<li>Ë«Óã×ù</li>',
+                        '<li>ç™½ç¾Šåº§</li>',
+                        '<li>é‡‘ç‰›åº§</li>',
+                        '<li>åŒå­åº§</li>',
+                        '<li>å·¨èŸ¹åº§</li>',
+                        '<li>ç‹®å­åº§</li>',
+                        '<li>å¤„å¥³åº§</li>',
+                        '<li>å¤©ç§¤åº§</li>',
+                        '<li>å¤©èåº§</li>',
+                        '<li>äººé©¬åº§</li>',
+                        '<li>æ‘©ç¾¯åº§</li>',
+                        '<li>å®ç“¶åº§</li>',
+                        '<li>åŒé±¼åº§</li>',
                     '</ul>'
                 ].join("");
                 
                 App.win({
-                    title: "Êı¾İµ¯´°",
+                    title: "æ•°æ®å¼¹çª—",
                     content: buffer,
                     width: 480
                 });
             });
-            <!--=E Êı¾İµ¯´° -->
+            <!--=E æ•°æ®å¼¹çª— -->
             
-            <!--=S ÌáÊ¾µ¯´° -->
+            <!--=S æç¤ºå¼¹çª— -->
             $("#alert").click(function() {
                 var buffer = [
                     '<dl class="win-alert">',
-                        '<dt class="msg">¹§Ï²Äã£¬Ìû×ÓÊÕ²Ø³É¹¦£¡<br /><a href="#" class="tip">Á¢¼´²é¿´¡°ÎÒµÄÊÕ²Ø¡±</a></dt>',
+                        '<dt class="msg">æ­å–œä½ ï¼Œå¸–å­æ”¶è—æˆåŠŸï¼<br /><a href="#" class="tip">ç«‹å³æŸ¥çœ‹â€œæˆ‘çš„æ”¶è—â€</a></dt>',
                         '<dd class="smiley"><img src="http://i3.dukuai.com/misc/forum/smilies/h200248.gif"></dd>',
                     '</dl>'
                 ].join("");
                 
                 App.win({
-                    title: "ÌáÊ¾µ¯´°",
+                    title: "æç¤ºå¼¹çª—",
                     content: buffer,
                     width: 275
                 });
             });
-            <!--=E ÌáÊ¾µ¯´° -->
+            <!--=E æç¤ºå¼¹çª— -->
             
         });
     </script>
